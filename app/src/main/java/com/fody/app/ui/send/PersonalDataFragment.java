@@ -34,6 +34,10 @@ public class PersonalDataFragment extends Fragment {
             auth.signOut();
         }catch (Exception e){
 
+
+
+
+
         }
          openLogin();
 
