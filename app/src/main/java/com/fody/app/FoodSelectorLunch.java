@@ -3,6 +3,7 @@ package com.fody.app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -79,6 +80,8 @@ public class FoodSelectorLunch extends AppCompatActivity {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
                                 Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                                openLunch();
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -155,6 +158,11 @@ public class FoodSelectorLunch extends AppCompatActivity {
         selectFood.setAdapter(adapter);
 
 
+    }
+    public void openLunch(){
+
+        Intent intent= new Intent(this,Lunch.class);
+        startActivity(intent);
     }
     public ArrayList<String> toStringArray (List<entityFood> list){
 

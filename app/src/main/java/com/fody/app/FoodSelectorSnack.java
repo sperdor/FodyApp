@@ -3,6 +3,7 @@ package com.fody.app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -80,6 +81,7 @@ public class FoodSelectorSnack extends AppCompatActivity {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
                                 Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
@@ -145,6 +147,11 @@ public class FoodSelectorSnack extends AppCompatActivity {
         });
 
 
+    }
+    public void openSnack(){
+
+        Intent intent= new Intent(this,Snack.class);
+        startActivity(intent);
     }
     public static Date getCurrentDate() {
 

@@ -31,7 +31,9 @@ public class PersonalDataFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_personaldata, container, false);
 
         try {
+
             auth.signOut();
+
         }catch (Exception e){
 
 
