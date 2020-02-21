@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "838102753650",
+    "firebase_url": "https://fody-7f90d.firebaseio.com",
+    "project_id": "fody-7f90d",
+    "storage_bucket": "fody-7f90d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838102753650:android:3f8f30ff77b168dffb3deb",
+        "android_client_info": {
+          "package_name": "com.fody.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838102753650-gsbj79ug0p0vsdeg4keef8dkp4t3u6ol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fody.app",
+            "certificate_hash": "15543df4d79a7f2be6f8d4a870248167f95b9a24"
+          }
+        },
+        {
+          "client_id": "838102753650-00bjcsb4nu6tgjgndqg1f7ib1rcdv51n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFq-pYK6BlotZm3W3wIzy9QR7SfBNufH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838102753650-00bjcsb4nu6tgjgndqg1f7ib1rcdv51n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

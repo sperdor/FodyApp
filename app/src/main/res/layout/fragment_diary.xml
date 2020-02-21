@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/texTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="28dp"
+        android:text="Diary" />
+
+    <Button
+        android:id="@+id/btnBreakfast"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_breakfast"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="Breakfast"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:padding="12dp"/>
+    <Button
+        android:id="@+id/btnLunch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_lunch"
+        android:layout_marginTop="210dp"
+        android:layout_centerHorizontal="true"
+        android:text="Lunch"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:padding="12dp"/>
+    <Button
+        android:id="@+id/btnSnack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_snack"
+        android:layout_marginTop="320dp"
+        android:layout_centerHorizontal="true"
+        android:text="Snack"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:padding="12dp"/>
+    <Button
+        android:id="@+id/btnDinner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_dinner"
+        android:layout_marginTop="430dp"
+        android:layout_centerHorizontal="true"
+        android:text="Dinner"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:padding="12dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@android:color/black"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

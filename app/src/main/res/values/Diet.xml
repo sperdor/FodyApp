@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Diet">
+        <item>Mediterranean</item>
+        <item>Vegetarian</item>
+        <item>Vegan</item>
+        <item>Keto</item>
+    </string-array>
+
+    <string-array name="PhisicsActivity">
+        <item>0-2</item>
+        <item>3-4</item>
+        <item>5-6</item>
+        <item>7+</item>
+    </string-array>
+
+    <string-array name="WorkingActivity">
+        <item>Sedentary (Office Work)</item>
+        <item>Slight activity (Housework)</item>
+        <item>Moderate activity (Mechanic) </item>
+        <item>Intense Activity (bricklayer )</item>
+    </string-array>
+
+
+</resources>
