@@ -19,25 +19,25 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.fody.app.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.fody.app.ui.personaldata.PersonalDataFragment"
+        android:label="Personal Data"
+        tools:layout="@layout/fragment_personaldata" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.fody.app.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:name="com.fody.app.ui.sleep.SleepFragment"
+        android:label="Sleep"
+        tools:layout="@layout/fragment_sleep" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.fody.app.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:name="com.fody.app.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.fody.app.ui.send.PersonalDataFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_personaldata" />
+        android:name="com.fody.app.ui.logout.LogOut"
+        android:label="LogOut"
+        tools:layout="@layout/fragment_logout" />
 </navigation>

@@ -1,14 +1,14 @@
-package com.fody.app.ui.send;
+package com.fody.app.ui.logout;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class PersonalDataViewModel extends ViewModel {
+public class LogOutViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public PersonalDataViewModel() {
+    public LogOutViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is send fragment");
     }

@@ -1,4 +1,4 @@
-package com.fody.app.ui.tools;
+package com.fody.app.ui.personaldata;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.fody.app.R;
 
-public class ToolsFragment extends Fragment {
+public class PersonalDataFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private PersonalDataViewModel personalDataViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        personalDataViewModel =
+                ViewModelProviders.of(this).get(PersonalDataViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_personaldata, container, false);
+        final TextView textView = root.findViewById(R.id.text_slideshow);
+        personalDataViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

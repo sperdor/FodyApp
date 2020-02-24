@@ -1,4 +1,4 @@
-package com.fody.app.ui.share;
+package com.fody.app.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.fody.app.R;
 
-public class ShareFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
-    private ShareViewModel shareViewModel;
+    private SettingsViewModel settingsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_share, container, false);
+        settingsViewModel =
+                ViewModelProviders.of(this).get(SettingsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_settings, container, false);
         final TextView textView = root.findViewById(R.id.text_share);
-        shareViewModel.getText().observe(this, new Observer<String>() {
+        settingsViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

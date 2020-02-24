@@ -61,8 +61,8 @@ public class HomeFragment extends Fragment  {
     public void onStart() {
         super.onStart();
 
-        //int result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
-        int result = 3;
+        int result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
+       // int result = 3;
         if (result==0){
             colorScore.setBackgroundResource(R.drawable.shape_drawable0);
             textscore.setText("There are not enough data for color score");
@@ -193,7 +193,7 @@ public class HomeFragment extends Fragment  {
                         Log.d(TAG, document.getId() + " => " + document.getData());
                         listBreakfast.clear();
                         listBreakfast.add(document.toObject(entityBreakfast.class));
-
+                        onStart();
 
 
                     }
@@ -214,7 +214,7 @@ public class HomeFragment extends Fragment  {
                         Log.d(TAG, document.getId() + " => " + document.getData());
                         listLunch.clear();
                         listLunch.add(document.toObject(entityLunch.class));
-
+                        onStart();
 
                     }
                 } else {
@@ -234,7 +234,7 @@ public class HomeFragment extends Fragment  {
                         Log.d(TAG, document.getId() + " => " + document.getData());
                         listSnack.clear();
                         listSnack.add(document.toObject(entitySnack.class));
-
+                        onStart();
 
                     }
                 } else {

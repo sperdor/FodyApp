@@ -1,34 +1,29 @@
-package com.fody.app.ui.send;
+package com.fody.app.ui.logout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.fody.app.FoodSelector;
 import com.fody.app.Login;
 import com.fody.app.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class PersonalDataFragment extends Fragment {
+public class LogOut extends Fragment {
 
-    private PersonalDataViewModel personalDataViewModel;
+    private LogOutViewModel logOutViewModel;
     private FirebaseAuth auth= FirebaseAuth.getInstance();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        personalDataViewModel =
-                ViewModelProviders.of(this).get(PersonalDataViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_personaldata, container, false);
+        logOutViewModel =
+                ViewModelProviders.of(this).get(LogOutViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_logout, container, false);
 
         try {
 
