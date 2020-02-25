@@ -36,14 +36,9 @@ import java.util.Date;
 public class PersonalData extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     //region Declared Variables
-    private TextView mDisplayDate;
     private EditText Age;
-    private DatePickerDialog.OnDateSetListener mDateSetListener;
-
-    private RadioGroup sex;
     private RadioButton male;
     private RadioButton female;
-
     private EditText wheight,target,height;
     private Spinner  country,diet,phisicsActivity,workingActivity;
     private TextView bust,waist,highHip,Hip;
@@ -52,6 +47,7 @@ public class PersonalData extends AppCompatActivity implements AdapterView.OnIte
     private FirebaseFirestore db ;
     private static final String TAG = "Personal Data";
     //endregion
+
 
 
     @Override
@@ -133,36 +129,7 @@ public class PersonalData extends AppCompatActivity implements AdapterView.OnIte
 
         db=FirebaseFirestore.getInstance();
 
-        //region Old Calendar
-      /*  mDisplayDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Calendar cal = Calendar.getInstance();
-                int year = cal.get(Calendar.YEAR);
-                int month = cal.get(Calendar.MONTH);
-                int day = cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog = new DatePickerDialog(
-                        PersonalData.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                        mDateSetListener,
-                        year,month,day);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-            }
-        });
-
-        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                month = month + 1;
-                Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
-
-                String date = month + "/" + day + "/" + year;
-                mDisplayDate.setText(date);
-            }
-        };*/
-        //endregion
     }
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
@@ -182,34 +149,7 @@ public class PersonalData extends AppCompatActivity implements AdapterView.OnIte
                     break;
         }
     }
-    //region OldCheckBox
-   /* public void onCheckboxClicked(View view){
-        boolean checked = ((CheckBox) view).isChecked();
 
-        // Check which checkbox was clicked
-        switch(view.getId()) {
-            case R.id.male:
-                if (checked){
-                    Gender = "male";
-                }
-
-            else
-                    male.setClickable(false);
-                    female.setClickable(true);
-                break;
-            case R.id.female:
-                if (checked){
-                    Gender = "female";
-                }
-                // Cheese me
-            else
-               female.setClickable(false);
-                male.setClickable(true);
-                break;
-        }
-
-    }*/
-   //endregion
 
 
     private void openHome() {
