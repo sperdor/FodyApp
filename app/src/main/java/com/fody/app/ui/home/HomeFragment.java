@@ -61,7 +61,9 @@ public class HomeFragment extends Fragment  {
     public void onStart() {
         super.onStart();
 
-        int result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
+        int result = 3;
+
+         result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
        // int result = 3;
         if (result==0){
             colorScore.setBackgroundResource(R.drawable.shape_drawable0);

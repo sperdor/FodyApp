@@ -17,35 +17,7 @@
             android:textAlignment="center"
             android:textSize="18sp" />
 
-        <RadioGroup
-            android:id="@+id/radioGrp"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
-            >
-            <RadioButton
-                android:id="@+id/radioM"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="onRadioButtonClicked"
-                android:checked="false"
-                android:layout_weight="1"
-                android:textSize="18dp"
-                android:text="Male"
-                />
-            <RadioButton
-                android:id="@+id/radioF"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:layout_weight="1"
-                android:textSize="18dp"
-                android:onClick="onRadioButtonClicked"
-                android:text="Female"
-                />
-        </RadioGroup>
+
 
 
         <EditText
@@ -81,15 +53,7 @@
             android:inputType="numberDecimal"
             android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/editTextHeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="220dp"
-            android:ems="10"
-            android:hint="Height (cm)"
-            android:inputType="numberDecimal"
-            android:textAlignment="center" />
+
 
         <Spinner
             android:id="@+id/country"

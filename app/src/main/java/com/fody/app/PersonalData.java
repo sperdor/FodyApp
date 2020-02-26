@@ -21,8 +21,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -106,21 +108,13 @@ public class PersonalData extends AppCompatActivity implements AdapterView.OnIte
                 CollectionReference dbuser =db.collection("PersonalData");
 
                 entityPersonalData personalData = new entityPersonalData(uid,gender,age,Wheigh,Target,Height,Diet,Country,Physics,working,Bust,Waist,HighHip,hip);
-                dbuser.add(personalData)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
-                                openHome();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
-
-                            }
-                        });
+                dbuser.document(user.getUid()).set(personalData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(getApplicationContext(),"added",Toast.LENGTH_SHORT).show();
+                        openHome();
+                    }
+                });
 
 
 

@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class entityPersonalData {
 
-    private String Gender;
-    private Integer Age;
-    private String Weight,Target,Height;
-    private String Country,Diet;
-    private String Phisycs,Working;
+    private String gender;
+    private Integer age;
+    private String weight,target,height;
+    private String country,diet;
+    private String phisycs,working;
     private String uid;
-    private String Waist,Bust,HighHip,Hip;
+    private String waist,bust,highHip,hip;
 
     public entityPersonalData() {
     }
@@ -20,76 +20,132 @@ public class entityPersonalData {
                               String country, String diet, String phisycs,String working, String waist, String bust,String highHip,
                               String hip) {
         this.uid=uid;
-        this.Gender= gender;
-        this.Age= age;
-        this.Weight=weight;
-        this.Target=target;
-        this.Height=height;
-        this.Country=country;
-        this.Diet=diet;
-        this.Phisycs= phisycs;
-        this.Working = working;
-        this.Waist=waist;
-        this.Bust=bust;
-        this.HighHip=highHip;
-        this.Hip =hip;
+        this.gender= gender;
+        this.age= age;
+        this.weight=weight;
+        this.target=target;
+        this.height=height;
+        this.country=country;
+        this.diet=diet;
+        this.phisycs= phisycs;
+        this.working = working;
+        this.waist=waist;
+        this.bust=bust;
+        this.highHip=highHip;
+        this.hip =hip;
 
 
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getTarget() {
+        return target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getDiet() {
+        return diet;
+    }
+
+    public void setDiet(String diet) {
+        this.diet = diet;
+    }
+
+    public String getPhisycs() {
+        return phisycs;
+    }
+
+    public void setPhisycs(String phisycs) {
+        this.phisycs = phisycs;
+    }
+
+    public String getWorking() {
+        return working;
+    }
+
+    public void setWorking(String working) {
+        this.working = working;
     }
 
     public String getUid() {
         return uid;
     }
 
-    public String getGender() {
-        return Gender;
-    }
-
-    public Integer getAge() {
-        return Age;
-    }
-
-    public String getWeight() {
-        return Weight;
-    }
-
-    public String getTarget() {
-        return Target;
-    }
-
-    public String getHeight() {
-        return Height;
-    }
-
-    public String getCountry() {
-        return Country;
-    }
-
-    public String getDiet() {
-        return Diet;
-    }
-
-    public String getPhisycs() {
-        return Phisycs;
-    }
-
-    public String getWorking() {
-        return Working;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getWaist() {
-        return Waist;
+        return waist;
+    }
+
+    public void setWaist(String waist) {
+        this.waist = waist;
     }
 
     public String getBust() {
-        return Bust;
+        return bust;
+    }
+
+    public void setBust(String bust) {
+        this.bust = bust;
     }
 
     public String getHighHip() {
-        return HighHip;
+        return highHip;
+    }
+
+    public void setHighHip(String highHip) {
+        this.highHip = highHip;
     }
 
     public String getHip() {
-        return Hip;
+        return hip;
+    }
+
+    public void setHip(String hip) {
+        this.hip = hip;
     }
 }
