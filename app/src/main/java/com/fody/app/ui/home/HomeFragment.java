@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment  {
 
         int result = 3;
 
-         result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
+       //  result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
        // int result = 3;
         if (result==0){
             colorScore.setBackgroundResource(R.drawable.shape_drawable0);
@@ -74,23 +74,23 @@ public class HomeFragment extends Fragment  {
         if(result >=1 && result <2 ){
 
             colorScore.setBackgroundResource(R.drawable.shape_drawable);
-            textscore.setText("Your color is red, you absolutly need to improve you habits - score : 1");
+            textscore.setText("Your color is red, you absolutly need to improve you habits");
 
         }else if(result >=2 && result <3){
             colorScore.setBackgroundResource(R.drawable.shape_drawable1);
-            textscore.setText("Your color is orange, we suggest you to start improve you lifestyle  - score : 2");
+            textscore.setText("Your color is orange, we suggest you to start improve you lifestyle");
 
         }else if(result >=3 && result <4){
             colorScore.setBackgroundResource(R.drawable.shape_drawable2);
-            textscore.setText("Your color is yellow, is not dangerous but try to better your lifestyle - score : 3");
+            textscore.setText("Your color is yellow, is not dangerous but try to better your lifestyle");
 
         }else if(result >=4 && result <4){
             colorScore.setBackgroundResource(R.drawable.shape_drawable3);
-            textscore.setText("Your color is light green, very well your lifestyle is pretty right but you can always get better - score : 4");
+            textscore.setText("Your color is light green, very well your lifestyle is pretty right but you can always get better");
 
         }else if(result >=5){
             colorScore.setBackgroundResource(R.drawable.shape_drawable4);
-            textscore.setText("Congratulations!,you have top score keep in this way  - score : 5");
+            textscore.setText("Congratulations!,keep going don't give up");
 
         }
 

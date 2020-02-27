@@ -11,20 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dinner"
-            android:label="Dinner"></activity>
-        <activity android:name=".Snack"
-            android:label="Snack"/>
-        <activity android:name=".Lunch"
-            android:label="Lunch"/>
-        <activity android:name=".FoodSelectorSnack"
-            android:label="Select Food"/>
-        <activity android:name=".FoodSelectorDinner"
-            android:label="Select Food"/>
-        <activity android:name=".FoodSelectorLunch"
-            android:label="Select Food"/>
-        <activity android:name=".FoodSelector"
-            android:label="Select Food"/>
+        <activity android:name=".TypeSelectorBreakfast"></activity>
+        <activity
+            android:name=".Dinner"
+            android:label="Dinner" />
+        <activity
+            android:name=".Snack"
+            android:label="Snack" />
+        <activity
+            android:name=".Lunch"
+            android:label="Lunch" />
+        <activity
+            android:name=".FoodSelectorSnack"
+            android:label="Select Food" />
+        <activity
+            android:name=".FoodSelectorDinner"
+            android:label="Select Food" />
+        <activity
+            android:name=".FoodSelectorLunch"
+            android:label="Select Food" />
+        <activity
+            android:name=".FoodSelector"
+            android:label="Select Food" />
         <activity
             android:name=".Breakfast"
             android:label="Breakfast" />

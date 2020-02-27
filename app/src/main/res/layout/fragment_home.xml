@@ -27,30 +27,42 @@
         android:layout_height="wrap_content"
          />
 
-
+    <TextView
+        android:id="@+id/textoptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="310dp"
+        android:fontFamily="monospace"
+        android:textSize="10dp"
+        android:text="Options: " />
     <Button
         android:id="@+id/legend"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="350dp"
         android:background="@drawable/shape_drawable"
         android:clickable="false"
         android:textColor="@color/white"
         android:padding="12dp"/>
+
     <TextView
         android:id="@+id/textLegend"
         android:layout_width="wrap_content"
-        android:layout_marginTop="255dp"
-        android:text="high risk, you have to act"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="monospace"
         android:layout_height="wrap_content"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="350dp"
+        android:fontFamily="monospace"
+        android:textSize="10dp"
+        android:text="high risk, you have to act" />
+
     <Button
         android:id="@+id/legend1"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="290dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="390dp"
         android:background="@drawable/shape_drawable1"
         android:clickable="false"
         android:textColor="@color/white"
@@ -58,17 +70,18 @@
     <TextView
         android:id="@+id/textLegend1"
         android:layout_width="wrap_content"
-        android:layout_marginTop="295dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginStart="40dp"
         android:text="medium risk, start improve now!"
-        android:layout_centerHorizontal="true"
         android:fontFamily="monospace"
+        android:textSize="10dp"
         android:layout_height="wrap_content"
         />
     <Button
         android:id="@+id/legend2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="330dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="430dp"
         android:background="@drawable/shape_drawable2"
         android:clickable="false"
         android:textColor="@color/white"
@@ -76,35 +89,39 @@
     <TextView
         android:id="@+id/textLegend2"
         android:layout_width="wrap_content"
-        android:layout_marginTop="335dp"
+        android:layout_marginTop="430dp"
         android:text="moderate risk, improve yourself!"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
         android:fontFamily="monospace"
+        android:textSize="10dp"
         android:layout_height="wrap_content"
         />
     <Button
         android:id="@+id/legend3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="370dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="470dp"
         android:background="@drawable/shape_drawable3"
         android:clickable="false"
         android:textColor="@color/white"
         android:padding="12dp"/>
+
     <TextView
         android:id="@+id/textLegend3"
         android:layout_width="wrap_content"
-        android:layout_marginTop="375dp"
-        android:text="good result, don't give up"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="monospace"
         android:layout_height="wrap_content"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="470dp"
+        android:fontFamily="monospace"
+        android:text="good result, don't give up"
+        android:textSize="10dp" />
+
     <Button
         android:id="@+id/legend4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="410dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="510dp"
         android:background="@drawable/shape_drawable4"
         android:clickable="false"
         android:textColor="@color/white"
@@ -112,29 +129,32 @@
     <TextView
         android:id="@+id/textLegend4"
         android:layout_width="wrap_content"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="510dp"
         android:text="Congratulations, keep this way!"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
         android:fontFamily="monospace"
+        android:textSize="10dp"
         android:layout_height="wrap_content"
         />
 
     <Button
         android:id="@+id/legend5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="450dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="550dp"
         android:background="@drawable/shape_drawable5"
         android:clickable="false"
         android:textColor="@color/white"
+
         android:padding="12dp"/>
     <TextView
         android:id="@+id/textLegend5"
         android:layout_width="wrap_content"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="550dp"
         android:text="maximum risk, talk with a doctor"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
         android:fontFamily="monospace"
+        android:textSize="10dp"
         android:layout_height="wrap_content"
         />
 

@@ -51,4 +51,31 @@
         android:name="com.fody.app.ui.logout.LogOut"
         android:label="LogOut"
         tools:layout="@layout/fragment_logout" />
+
+
+    <fragment
+        android:id="@+id/nav_work"
+        android:name="com.fody.app.ui.workdiary.WorkFragment"
+        android:label="Work Diary"
+        tools:layout="@layout/fragment_work" />
+    <fragment
+        android:id="@+id/nav_freetime"
+        android:name="com.fody.app.ui.freetimediary.FreetimeFragment"
+        android:label="Freetime Diary"
+        tools:layout="@layout/fragment_freetime" />
+    <fragment
+        android:id="@+id/nav_sport"
+        android:name="com.fody.app.ui.sportdiary.SportFragment"
+        android:label="Sport Diary"
+        tools:layout="@layout/fragment_sport" />
+    <fragment
+        android:id="@+id/nav_cultural"
+        android:name="com.fody.app.ui.culturaldiary.CulturalFragment"
+        android:label="Cultural Diary"
+        tools:layout="@layout/fragment_cultural" />
+    <fragment
+        android:id="@+id/nav_preventional"
+        android:name="com.fody.app.ui.preventionaldiary.PreventionalFragment"
+        android:label="Preventional Diary"
+        tools:layout="@layout/fragment_preventional" />
 </navigation>

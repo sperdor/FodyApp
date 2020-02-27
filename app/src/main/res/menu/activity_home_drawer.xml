@@ -8,40 +8,68 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_book_black_24dp"
-            android:title="@string/menu_diary" />
+
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_person"
             android:title="Personal Data" />
         <item
+            android:id="@+id/nav_anamnesis"
+            android:icon="@drawable/ic_anamnesis"
+            android:title="Medical Diary" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="Food Diary" />
+        <item
+
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_sleep"
-            android:title="Sleep" />
+            android:title="Sleep Diary" />
+
+        <item
+
+            android:id="@+id/nav_work"
+            android:icon="@drawable/ic_work"
+            android:title="Work Diary" />
+
+        <item
+
+            android:id="@+id/nav_freetime"
+            android:icon="@drawable/ic_freetime"
+            android:title="Freetime Diary" />
+        <item
+
+            android:id="@+id/nav_sport"
+            android:icon="@drawable/ic_sport"
+            android:title="Sport Diary" />
+
+        <item
+
+            android:id="@+id/nav_cultural"
+            android:icon="@drawable/ic_cultural_24dp"
+            android:title="Cultural Diary" />
+        <item
+
+            android:id="@+id/nav_preventional"
+            android:icon="@drawable/ic_prevetional"
+            android:title="Preventional Diary" />
         <item
             android:id="@+id/nav_statistics"
             android:icon="@drawable/ic_assessment"
             android:title="Statistics" />
+
         <item
-            android:id="@+id/nav_anamnesis"
-            android:icon="@drawable/ic_anamnesis"
-            android:title="Anamnesis" />
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Log Out" />
+
     </group>
 
 
-    <item android:title="Other">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Settings" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_exit_to_app_black_24dp"
-                android:title="Log Out" />
-        </menu>
 
-    </item>
 </menu>
