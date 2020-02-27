@@ -28,6 +28,17 @@
         android:name="com.fody.app.ui.sleep.SleepFragment"
         android:label="Sleep"
         tools:layout="@layout/fragment_sleep" />
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.fody.app.ui.statistics.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics" />
+
+    <fragment
+        android:id="@+id/nav_anamnesis"
+        android:name="com.fody.app.ui.anamnesis.AnamnesisFragment"
+        android:label="Anamnesis"
+        tools:layout="@layout/fragment_anamnesis" />
 
     <fragment
         android:id="@+id/nav_share"
