@@ -1,5 +1,6 @@
 package com.fody.app.ui.home;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -22,6 +23,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.fody.app.BreakfastAdapter;
 import com.fody.app.R;
+import com.fody.app.entityAnamnesis;
 import com.fody.app.entityBreakfast;
 import com.fody.app.entityDinner;
 import com.fody.app.entityLunch;
@@ -53,48 +55,68 @@ public class HomeFragment extends Fragment  {
     private List<entityLunch> listLunch = new ArrayList<>();
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private List<entitySnack> listSnack = new ArrayList<>();
-    final List<entityBreakfast> listBreakfast = new ArrayList<>();
+    private List<entityAnamnesis> listAnamnesis = new ArrayList<>();
+    private List<entityBreakfast> listBreakfast = new ArrayList<>();
     private List<Double> listScore = new ArrayList<>();
     final static String TAG ="breakfast";
 
     @Override
+    public void onAttach(Context context){
+        super.onAttach(getContext());
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        getBreakfast();
+        getLunch();
+        getSnack();
+        getAnamnesis();
+        getDinner();
+
+
+    }
+    @Override
     public void onStart() {
         super.onStart();
 
-        int result = 3;
 
-       //  result = calculateScore(listBreakfast,listLunch,listSnack,listDinner);
-       // int result = 3;
-        if (result==0){
+
+       //
+        //
+        int result = calculateScore(listBreakfast,listLunch,listSnack,listDinner,listAnamnesis);
+        if(listAnamnesis.isEmpty()){
             colorScore.setBackgroundResource(R.drawable.shape_drawable0);
             textscore.setText("There are not enough data for color score");
+
+        }else {
+
+            if (result == 0) {
+                colorScore.setBackgroundResource(R.drawable.shape_drawable0);
+                textscore.setText("There are not enough data for color score");
+            }
+
+
+            if (result >= 1 && result < 2) {
+
+                colorScore.setBackgroundResource(R.drawable.shape_drawable);
+                textscore.setText("Your color is red, you absolutly need to improve you habits");
+
+            } else if (result >= 2 && result < 3) {
+                colorScore.setBackgroundResource(R.drawable.shape_drawable1);
+                textscore.setText("Your color is orange, we suggest you to start improve you lifestyle");
+
+            } else if (result >= 3 && result < 4) {
+                colorScore.setBackgroundResource(R.drawable.shape_drawable2);
+                textscore.setText("Your color is yellow, is not dangerous but try to better your lifestyle");
+
+            } else if (result >= 4 && result < 5) {
+                colorScore.setBackgroundResource(R.drawable.shape_drawable3);
+                textscore.setText("Your color is light green, very well your lifestyle is pretty right but you can always get better");
+
+            } else if (result >= 5) {
+                colorScore.setBackgroundResource(R.drawable.shape_drawable4);
+                textscore.setText("Congratulations!,keep going don't give up");
+
+            }
+
         }
-
-
-        if(result >=1 && result <2 ){
-
-            colorScore.setBackgroundResource(R.drawable.shape_drawable);
-            textscore.setText("Your color is red, you absolutly need to improve you habits");
-
-        }else if(result >=2 && result <3){
-            colorScore.setBackgroundResource(R.drawable.shape_drawable1);
-            textscore.setText("Your color is orange, we suggest you to start improve you lifestyle");
-
-        }else if(result >=3 && result <4){
-            colorScore.setBackgroundResource(R.drawable.shape_drawable2);
-            textscore.setText("Your color is yellow, is not dangerous but try to better your lifestyle");
-
-        }else if(result >=4 && result <4){
-            colorScore.setBackgroundResource(R.drawable.shape_drawable3);
-            textscore.setText("Your color is light green, very well your lifestyle is pretty right but you can always get better");
-
-        }else if(result >=5){
-            colorScore.setBackgroundResource(R.drawable.shape_drawable4);
-            textscore.setText("Congratulations!,keep going don't give up");
-
-        }
-
-
 
 
 
@@ -115,7 +137,7 @@ public class HomeFragment extends Fragment  {
         getBreakfast();
         getLunch();
         getSnack();
-
+        getAnamnesis();
         getDinner();
 
 
@@ -141,9 +163,24 @@ public class HomeFragment extends Fragment  {
         return today;
     }
 
-    private int calculateScore ( List<entityBreakfast> b,List<entityLunch> l, List<entitySnack> s,List<entityDinner> d){
+    private int calculateScore ( List<entityBreakfast> b,List<entityLunch> l, List<entitySnack> s,List<entityDinner> d,List<entityAnamnesis> a){
         int score = 0;
         listScore.clear();
+
+        if(!a.isEmpty()){
+          Double smoke,diseas,surgery,genetic,drugs;
+          smoke =(double) a.get(0).getSmoke();
+            diseas =(double) a.get(0).getDisease();
+            surgery =(double) a.get(0).getSurgery();
+            genetic =(double) a.get(0).getGenetic();
+            drugs =(double) a.get(0).getDrugs();
+
+            listScore.add(smoke);
+            listScore.add(diseas);
+            listScore.add(surgery);
+            listScore.add(genetic);
+            listScore.add(drugs);
+        }
 
         if(!b.isEmpty()){
             for(int i =0; i < b.size(); i++){
@@ -247,6 +284,30 @@ public class HomeFragment extends Fragment  {
         return listSnack;
 
     }
+    private List<entityAnamnesis> getAnamnesis(){
+
+        db.collection("Anamnesis").whereEqualTo("uid",user.getUid()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d(TAG, document.getId() + " => " + document.getData());
+                        listAnamnesis.clear();
+                        listAnamnesis.add(document.toObject(entityAnamnesis.class));
+                        onStart();
+
+                    }
+                } else {
+                    Log.w(TAG, "Error getting documents.", task.getException());
+                }
+            }
+        });
+
+
+        return listAnamnesis;
+
+    }
+
     private List<entityDinner> getDinner(){
         db.collection("dinner").whereEqualTo("uid",user.getUid()).whereEqualTo("date",getCurrentDate()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override

@@ -1,8 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.fody.app.PersonalData">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="20dp"
+                android:text="Anamnesis"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="80dp"
+                android:text="Do you smoke?"
+                android:textSize="18sp" />
+            <RadioGroup
+                android:id="@+id/radioGrpSmoke"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:id="@+id/radioN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+
+                    android:textSize="18dp"
+                    android:text="No"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="180dp"
+                android:text="You have had or have serious diseas?"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGrpDiseas"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="210dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioDiseasY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:id="@+id/radioDiseasN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="No"
+                    />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editDiseas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:hint="Which one?"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="290dp"
+                android:text="You have had surgery intervention?"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGrpSurgery"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="320dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioSurgeryY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:id="@+id/radioSurgeryN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="No"
+                    />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editSurgery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="350dp"
+                android:hint="Which one?"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="400dp"
+                android:text="You have genetic diseas in the family?"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGrpGenetic"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="460dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioGeneticY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:id="@+id/radioGeneticN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="No"
+                    />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editGenetic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="500dp"
+                android:hint="Which one?"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:layout_marginTop="550dp"
+                android:text="Do you use drugs currently?"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGrpDrugs"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="590dp"
+                >
+                <RadioButton
+                    android:id="@+id/radioDrugsY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="Yes"
+                    />
+                <RadioButton
+                    android:id="@+id/radioDrugsN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:text="No"
+                    />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editDrugs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="630dp"
+                android:hint="Which one?"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="text" />
+
+
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnAnamnesis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="720dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Conferma" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

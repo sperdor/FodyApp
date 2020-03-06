@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/nav_anamnesis"
         android:name="com.fody.app.ui.anamnesis.AnamnesisFragment"
-        android:label="Anamnesis"
+        android:label="Medical Data"
         tools:layout="@layout/fragment_anamnesis" />
 
     <fragment
@@ -76,6 +76,6 @@
     <fragment
         android:id="@+id/nav_preventional"
         android:name="com.fody.app.ui.preventionaldiary.PreventionalFragment"
-        android:label="Preventional Diary"
+        android:label="Prevention Diary"
         tools:layout="@layout/fragment_preventional" />
 </navigation>

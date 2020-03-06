@@ -17,6 +17,9 @@ import com.fody.app.Lunch;
 import com.fody.app.R;
 import com.fody.app.Snack;
 import com.fody.app.TypeSelectorBreakfast;
+import com.fody.app.TypeSelectorDinner;
+import com.fody.app.TypeSelectorLunch;
+import com.fody.app.TypeSelectorSnack;
 
 public class DiaryFragment extends Fragment  {
 
@@ -47,21 +50,21 @@ public class DiaryFragment extends Fragment  {
         lunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(root.getContext(), Lunch.class);
+                Intent intent = new Intent(root.getContext(), TypeSelectorLunch.class);
                 startActivity(intent);
             }
         });
         snack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(root.getContext(), Snack.class);
+                Intent intent = new Intent(root.getContext(), TypeSelectorSnack.class);
                 startActivity(intent);
             }
         });
         dinner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(root.getContext(), Dinner.class);
+                Intent intent = new Intent(root.getContext(), TypeSelectorDinner.class);
                 startActivity(intent);
             }
         });

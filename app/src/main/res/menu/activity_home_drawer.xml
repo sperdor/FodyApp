@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single" android:id="@+id/gp_one">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
@@ -16,7 +16,7 @@
         <item
             android:id="@+id/nav_anamnesis"
             android:icon="@drawable/ic_anamnesis"
-            android:title="Medical Diary" />
+            android:title="Medical Data" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_book_black_24dp"
@@ -53,20 +53,26 @@
 
             android:id="@+id/nav_preventional"
             android:icon="@drawable/ic_prevetional"
-            android:title="Preventional Diary" />
-        <item
-            android:id="@+id/nav_statistics"
-            android:icon="@drawable/ic_assessment"
-            android:title="Statistics" />
+            android:title="Prevention Diary" />
 
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_settings_black_24dp"
-            android:title="Settings" />
-        <item
-            android:id="@+id/nav_send"
-            android:icon="@drawable/ic_exit_to_app_black_24dp"
-            android:title="Log Out" />
+
+    </group>
+    <group android:id="@+id/gp_two">
+
+            <item
+                android:id="@+id/nav_statistics"
+                android:icon="@drawable/ic_assessment"
+                android:title="Statistics" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Log Out" />
+
 
     </group>
 
